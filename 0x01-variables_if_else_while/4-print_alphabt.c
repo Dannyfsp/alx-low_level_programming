@@ -6,15 +6,14 @@
  */
 int main(void)
 {
-int ch;
-for (ch = 97; ch <= 122; ch++)
-
+char xyz;
+for (xyz = 'a'; xyz <= 'z'; ch++)
 {
-if (ch != 113); &&(ch != 101);
+if (xyz != 'q'; &&xyz != 'e')
 {
 putchar(ch);
 }
 }
-putchar(10);
+putchar("\n");
 return (0);
 }

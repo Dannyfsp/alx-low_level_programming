@@ -1,15 +1,17 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * print all single digit numbers of basse 10
+ * print all single digit numbers of base 10
  * Return: Alwways 0
  */
 int main(void)
 {
 int n;
-for (n = 0; n < 10; n++)
+n = 0;
+while (n < 10)
 {
 printf("%d\n", n);
+n++;
 }
 return (0);
 }
