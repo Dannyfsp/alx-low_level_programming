@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-char ch;
-for (ch = 'a'; ch <= 'z'; ch++)
+int ch;
+for (ch = 97; ch <= 122; ch++)
 {
-if (ch != 'q'; &&ch != 'e')
+if (ch != 113; &&ch != 101)
 {
 putchar(ch);
 }

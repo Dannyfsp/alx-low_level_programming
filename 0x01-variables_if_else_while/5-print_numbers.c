@@ -3,7 +3,7 @@
  * main - Entry point
  * print all single digit numbers of basse 10
  * Return: Alwways 0
- * */
+ */
 int main(void)
 {
 int n;
