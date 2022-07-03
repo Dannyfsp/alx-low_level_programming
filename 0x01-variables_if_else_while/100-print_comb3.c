@@ -2,7 +2,7 @@
 /**
  * main -Entry point
  * print all possible different combinations of two digits
- * return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -16,7 +16,7 @@ if (i > x)
 {
 putchar(x);
 putchar(i);
-if (x != 57 || i != 57)
+if (x != 56 || i != 57)
 {
 putchar(44);
 putchar(32);
@@ -24,4 +24,6 @@ putchar(32);
 }
 }
 }
+putchar(10);
+return (0);
 }
