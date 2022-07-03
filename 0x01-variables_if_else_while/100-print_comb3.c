@@ -16,7 +16,7 @@ if (i > x)
 {
 putchar(x);
 putchar(i);
-if (x != 57 || n != 57)
+if (x != 57 || i != 57)
 {
 putchar(44);
 putchar(32);

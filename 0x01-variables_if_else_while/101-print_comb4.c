@@ -19,7 +19,7 @@ if (i > x && a > i)
 {
 putchar(x);
 putchar(i);
-Putchar(a);
+putchar(a);
 if (x != 55 || i !=56 || a != 57)
 {
 putchar(44);
