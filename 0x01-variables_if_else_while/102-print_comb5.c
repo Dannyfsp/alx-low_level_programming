@@ -19,7 +19,7 @@ putchar(i % 10 + 48);
 putchar(' ');
 putchar(x / 10 + 48);
 putchar(x % 10 + 48);
-if (i = 100 + x != 9899)
+if (i * 100 + x != 9899)
 {
 putchar(',');
 putchar(' ');
