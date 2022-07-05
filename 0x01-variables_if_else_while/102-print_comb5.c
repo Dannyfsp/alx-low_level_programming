@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  * prints all possible combination of two two-digit numbers i.e in pair
- * return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
