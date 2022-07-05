@@ -8,16 +8,22 @@ int main(void)
 {
 int x;
 int i;
-for (x = 48; x <= 57; x++)
+for (x = 0; i <= 99; i++)
 {
-for (i = 48; i <= 57; i++)
+for (x = i; x <= 99; x++)
 {
-putchar(x);
-putchar(i);
-if (x != 57 || i != 57)
+if (x != i)
 {
-putchar(44);
-putchar(32);
+putchar(i / 10 + 48);
+putchar(i % 10 + 48);
+putchar(' ');
+putchar(x / 10 + 48);
+putchar(x % 10 + 48);
+if (i = 100 + x != 9899)
+{
+putchar(',');
+putchar(' ');
+}
 }
 }
 }
