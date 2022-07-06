@@ -5,9 +5,10 @@
  * int - integer
  * Return: addition of int a and int b
  */
-int add(int a, int b)
+int add(int, int)
 {
 int a, b;
-int n = a + b;
-return (n);
+int result = a + b;
+_putchar(result);
+return (0);
 }
