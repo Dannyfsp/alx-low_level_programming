@@ -5,7 +5,7 @@
  * int - integer
  * Return: addition of int a and int b
  */
-int add(int, int)
+int add(int a, int b)
 {
 int a, b;
 int n = a + b;
