@@ -2,15 +2,12 @@
 /**
  * add - Entry point
  * addition of two numbers
- * @a: first number
- * @b: second number
+ * int - integer
  * Return: addition of int a and int b
  */
-int add(int a, int b)
+int add(int, int)
 {
-int n
-a = 89;
-b = 9;
-n = 89 + 9;
+int a, b;
+int n = a + b;
 return (n);
 }
