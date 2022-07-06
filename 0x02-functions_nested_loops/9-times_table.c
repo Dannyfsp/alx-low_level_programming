@@ -1,26 +1,26 @@
 #include "main.h"
 /**
- * jack_bauer - Entry point
- * prints every minute of the day
+ * times_table - Entry point
+ * prints 9 times table
  */
-void jack_bauer(void)
+void times_table(void)
 {
 int a, b;
-for (a = 0; a < 24; a++)
+for (a = 0; a < 9; a++)
 {
-for (b = 0; b < 60; b++)
+for (b = 0; b <= 9; b++)
 {
-if (a < 10)
+if (a < 9)
 {
 _putchar('0');
-_putchar(a + '0');
+_putchar(',');
 }
-else if (a >= 10)
+else if (a >= 9)
 {
-_putchar((a / 10) + '0');
-_putchar((a % 10) + '0');
+_putchar(a / 9);
+_putchar((a % 9);
 }
-if (b < 10)
+if (b < 9)
 {
 _putchar(':');
 _putchar('0');
