@@ -20,7 +20,7 @@ for (j = 0; j < size; j++)
 {
 _putchar(35);
 }
-_putchat('\n');
+_putchar('\n');
 }
 }
 }
