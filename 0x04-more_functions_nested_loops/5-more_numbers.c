@@ -1,18 +1,22 @@
 #include "main.h"
 
 /**
- * print_most_numbers - Entry point
- * a function that prints numbers from 0 to 9 (not printing 2 and 4)
- * 
- * Return: On success numbers
+ * more_numbers - Entry point
+ * a function that prints 10 times the numbers from 0 to 14
  */
-void print_most_numbers(void)
+void more_numbers(void)
 {
-int i;
+int i, a;
 for (i = 0; i < 10; i++)
 {
-if (i != 2 && i != 4)
-_putchar(i + '0');
+for (a = 0; a < 15; a++)
+{
+if (a >= 10)
+{
+_putchar((a / 10) + '0');
+}
+_putchar((a % 10) + '0');
 }
 _putchar('\n');
+}
 }
