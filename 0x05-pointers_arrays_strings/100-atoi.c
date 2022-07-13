@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
 	int a;
-	unsigned int n = 0;
+	unsigned int nah = 0;
 	int min = 1;
 	int sec = 0;
 
@@ -22,7 +22,7 @@ int _atoi(char *s)
 		while (s[a] >= 48 && s[a] <= 57)
 		{
 			sec = 1;
-			n = (n * 10) + (s[a] - '0');
+			nah = (nah * 10) + (s[a] - '0');
 			a++;
 		}
 		if (sec == 1)
@@ -30,6 +30,6 @@ int _atoi(char *s)
 			break;
 		}
 	}
-	n *= min;
-	return (n);
+	nah *= min;
+	return (nah);
 }
