@@ -13,9 +13,10 @@ char *string_toupper(char *ch)
 	while (ch[i])
 	{
 		if (ch[i] >= 97 && ch[i] <= 122)
-		{	ch[i] = ch[i] - 32;
-			i++;
+		{
+			ch[i] = ch[i] - 32;
 		}
+		i++;
 	}
 	return (ch);
 }
