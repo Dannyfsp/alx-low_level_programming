@@ -3,15 +3,12 @@
 /**
  * reverse_array - Entry point
  * function that reverses the content of an array
- * @a: pointer parameter 1
+ * @a: pointer array
  * @n: an element of the array
  */
 void reverse_array(int *a, int n)
 {
-	int *p;
-	int i;
-	int j;
-	int k;
+	int *p, i, j, k;
 
 	p = a;
 	for (i = 0; i < n; i++)
