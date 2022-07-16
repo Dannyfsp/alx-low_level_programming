@@ -8,5 +8,7 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *ch);
+char *rot13(char *ch);
+void print_number(int n);
 
 #endif
