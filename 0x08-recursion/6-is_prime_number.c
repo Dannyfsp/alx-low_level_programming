@@ -1,6 +1,6 @@
 #include "main.h"
 
-int prime(int, int)
+int prime(int, int);
 
 /**
  * is_prime_number - Entry point
@@ -25,7 +25,7 @@ int prime(int n, int i)
 	{
 		return (0);
 	}
-	if (n % i && i > 1)
+	if (n % i == 0 && i > 1)
 	{
 		return (0);
 	}
