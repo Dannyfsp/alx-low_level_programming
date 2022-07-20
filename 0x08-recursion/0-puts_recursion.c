@@ -4,6 +4,7 @@
  * _puts_recursion - Entry point
  * function that prints string followed by  new line
  * @s: string parameter
+ * Return: on Success 0
  */
 void _puts_recursion(char *s)
 {
@@ -13,5 +14,5 @@ void _puts_recursion(char *s)
 		return;
 	}
 	_putchar(*s);
-	_puts_recursion(s + 1);
+	_puts_recursion(++s);
 }
