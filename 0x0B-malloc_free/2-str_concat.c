@@ -2,23 +2,6 @@
 #include <stdlib.h>
 
 /**
- * _strlen - returns length of a string
- * @s: string parameter
- * Return: length of string
- */
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s)
-	{
-		s++;
-		len++;
-	}
-	return (len);
-}
-
-/**
  * str_concat - Entry point
  * function that concatenates two strings
  * @s1: string parameter1
@@ -27,7 +10,8 @@ int _strlen(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *cat, *concat;
+	int i = 0, j = 0, k = 0, l = 0;
+	char *ptr;
 
 	if (s1 == NULL)
 	{
@@ -37,26 +21,37 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
+	while (s1[i])
+	{
+		i++;
+	}
+	while (s2[j])
+	{
+		j++;
+	}
 
-	cat = malloc(sizeof(char) * (_strlen(s1) + strlen(s2)) + 1);
-	if (!cat)
+	l = i + j;
+
+	ptr = (char *)malloc(l * sizeof(char) + 1);
+	if (s == NULL)
 	{
 		return (NULL);
 	}
-	concat = cat;
-	while (*s1)
+	j = 0;
+	while (k < l)
 	{
-		*concat = *s1;
-		concat++;
-		s1++;
+		if (k < i)
+		{
+			ptr[k] = s1[k];
+		}
+		if (k >= i)
+		{
+			ptr[k] = s2[j];
+			j++;
+		}
+		k++;
 	}
-	while (*s2)
-	{
-		*concat = *s2;
-		concat++;
-		s2++;
-	}
-	*concat = '\0';
-	return (cat);
+	ptr[k] = '\0';
+	return (ptr);
 
 }
