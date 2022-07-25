@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
 	firstNum = atoi(argv[1]);
 	secondNum = atoi(argv[2]);
 	result = firstNum * secondNum;
-
 	printf("%d\n", result);
 	return (0);
 }
