@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * str_concat - Entry point
@@ -9,8 +11,8 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, j = 0, k = 0, l = 0;
-	char *ptr;
+	int i = 0, j = 0, n;
+	char *newstr;
 
 	if (s1 == NULL)
 	{
@@ -20,37 +22,42 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	while (s1[i])
-	{
-		i++;
-	}
-	while (s2[j])
-	{
-		j++;
-	}
-
-	l = i + j;
-
-	ptr = (char *)malloc(1 * sizeof(char) + 1);
-	if (s == NULL)
+	n = string_length(s1) + string_length(s2) + 1;
+	newstr = malloc(sizeof(char) * n);
+	if (newstr == NULL)
 	{
 		return (NULL);
 	}
-	j = 0;
-	while (k < l)
+	/* insert s1 into the new string */
+	while (s1[i] != '\0')
 	{
-		if (k < i)
-		{
-			ptr[k] = s1[k];
-		}
-		if (k >= i)
-		{
-			ptr[k] = s2[j];
-			j++;
-		}
-		k++;
+		newstr[j] = s1[i];
+		i++;
+		j++;
 	}
-	ptr[k] = '\0';
-	return (ptr);
+	/* insert s2 into the new string */
+	while (s2[i] != '\0')
+	{
+		newstr[j] = s2[i];
+		i++;
+		j++;
+	}
+	newstr[j] = '\0';
+	return (newstr);
+}
 
+/**
+ * string_length - finds length of string
+ * @ptr: pointer parameter
+ * Return: on Success - length of string
+ */
+int string_length(char *ptr)
+{
+	int c = 0;
+
+	while (*(ptr + c) != '\0')
+	{
+		c++;
+	}
+	return (c);
 }
