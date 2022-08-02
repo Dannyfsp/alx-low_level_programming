@@ -30,29 +30,29 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-	(*new_dog).name = malloc(length_of_name + 1);
-	if ((*new_dog).name == NULL)
+	new_dog->name = malloc(length_of_name + 1);
+	if (new_dog->name == NULL)
 	{
 		free(new_dog);
-		free((*new_dog).name);
+		free(new_dog->name);
 		return (NULL);
 	}
 	(*new_dog).owner = malloc(length_of_owner + 1);
 	if ((*new_dog).owner == NULL)
 	{
 		free(new_dog);
-		free((*new_dog).name);
-		free((*new_dog).owner);
+		free(new_dog->name);
+		free(new_dog->owner);
 		return (NULL);
 	}
 	for (i = 0; i <= length_of_name; i++)
 	{
-		(*new_dog).name[i] = name[i];
+		new_dog->name[i] = name[i];
 	}
 	for (i = 0; i <= length_of_owner; i++)
 	{
-		(*new_dog).owner = owner[i];
+		new_dog->owner = owner[i];
 	}
-	(*new_dog).age = age;
+	new_dog->age = age;
 	return (new_dog);
 }
