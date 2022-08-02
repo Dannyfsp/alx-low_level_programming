@@ -6,7 +6,7 @@
  * print_dog - Entry point
  * function that prints a struct dog
  * @d: struct dog to be printed
- * Return: if NULL 0
+ * Return: nothing
  */
 void print_dog(struct dog *d)
 {
@@ -36,9 +36,5 @@ void print_dog(struct dog *d)
 		{
 			printf("Owner: %s\n", "(nil)");
 		}
-	}
-	else
-	{
-		return (0);
 	}
 }
