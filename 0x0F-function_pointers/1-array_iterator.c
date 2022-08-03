@@ -2,7 +2,7 @@
 
 /**
  * array_iterator - Entry point
- * function that executes a function given 
+ * function that executes a function given
  * as a parameter on each element of an array
  * @array: array to execute function on
  * @size: size of array
