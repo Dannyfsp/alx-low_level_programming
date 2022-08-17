@@ -1,73 +1,38 @@
 #include "lists.h"
 
-
 /**
- * free_listp2 - frees a linked list
- * @head: head of a list.
- *
- * Return: no return.
+ * find_listint_loop - finds the loop contained
+ *                     in a linked lis
+ * @head : pointer to the head of the linked list
+ * Return: pointer the node where the loop starts,
+ *         or NULL - if there is no loop
  */
-void free_listp2(listp_t **head)
+listint_t *find_listint_loop(listint_t *head)
 {
-	listp_t *temp;
-	listp_t *curr;
+	listint_t *node1, *node2;
 
-	if (head != NULL)
+	if (head == NULL || head->next == NULL)
+		return (NULL);
+
+	node1 = head->next;
+	node2 = (head->next)->next;
+
+	while (node2)
 	{
-		curr = *head;
-		while ((temp = curr) != NULL)
+		if (node1 == node2)
 		{
-			curr = curr->next;
-			free(temp);
-		}
-		*head = NULL;
-	}
-}
+			node1 = head;
 
-/**
- * free_listint_safe - frees a linked list.
- * @h: head of a list.
- *
- * Return: size of the list that was freed.
- */
-size_t free_listint_safe(listint_t **h)
-{
-	size_t nnodes = 0;
-	listp_t *hptr, *new, *add;
-	listint_t *curr;
-
-	hptr = NULL;
-	while (*h != NULL)
-	{
-		new = malloc(sizeof(listp_t));
-
-		if (new == NULL)
-			exit(98);
-
-
-		new->p = (void *)*h;
-		new->next = hptr;
-		hptr = new;
-
-		add = hptr;
-
-		while (add->next != NULL)
-		{
-			add = add->next;
-			if (*h == add->p)
+			while (node1 != node2)
 			{
-				*h = NULL;
-				free_listp2(&hptr);
-				return (nnodes);
+				node1 = node1->next;
+				node2 = node2->next;
 			}
+			return (node1);
 		}
-		curr = *h;
-		*h = (*h)->next;
-		free(curr);
-		nnodes++;
+		node1 = node1->next;
+		node2 = (node2->next)->next;
 	}
 
-	*h = NULL;
-	free_listp2(&hptr);
-	return (nnodes);
+	return (NULL);
 }
